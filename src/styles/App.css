@@ -25,6 +25,7 @@
   --persian-blue:  #1c39bb;
   --persian-indigo:#32127a;
   --persian-pink:  #f77fbe;
+  --persian-red: #cc124d;
 
   /* Softer tints for backgrounds */
   --pg-10: rgba(0,166,147,.10);
@@ -183,7 +184,7 @@ body{
   align-items:center;
   border: 1px solid rgba(20,20,20,.10);
   background: rgba(255,255,255,.82);
-  color: var(--text);
+  color: var(--persian-red);
   padding: 8px 12px;
   border-radius: 999px;
   cursor:pointer;
@@ -275,7 +276,7 @@ body{
 .nav{
   display:flex;
   gap: 18px;
-  color: var(--muted);
+  color: var(--persian-red);
   font-size: .98rem;
 }
 .nav a:hover{ color: var(--text); }
@@ -343,7 +344,7 @@ body{
   font-size: 3rem;
   margin: 10px 0 8px;
   letter-spacing: .02em;
-  background: var(--accent-gradient);
+  background: var(--persian-red);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -778,7 +779,7 @@ body{
   gap: 18px;
   flex-wrap: wrap;
 }
-.footerTitle{ font-weight: 950; font-size: 1.1rem; }
+.footerTitle{ font-weight: 950; font-size: 1.1rem; color: var(--persian-red); }
 .footerSmall{ margin-top: 10px; }
 .footerCols{
   display:flex;
@@ -791,7 +792,7 @@ body{
   gap: 8px;
   color: var(--muted);
 }
-.footerHead{ color: var(--text); font-weight: 950; margin-bottom: 4px; }
+.footerHead{ color: var(--persian-red); font-weight: 950; margin-bottom: 4px; }
 
 /* Modal */
 .modalBackdrop{

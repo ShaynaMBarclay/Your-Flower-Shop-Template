@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import "./styles/App.css";
 
-// ✅ Import your local placeholders
 import flowerplaceholder from "./assets/flowerplaceholder.jpg";
 import flowerplaceholder2 from "./assets/flowerplaceholder2.jpg";
 import flowerplaceholder3 from "./assets/flowerplaceholder3.jpg";
