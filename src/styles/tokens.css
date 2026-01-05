@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,600,700&family=Manrope:wght@300;400;500;600;700&display=swap");
+
+:root{
+  --font-heading: "Fraunces", serif;
+  --font-body: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Light base */
+  --bg: #fbfaf8;
+  --bg2:#f6f2ee;
+  --surface: #ffffff;
+  --surface2:#ffffff;
+  --border: rgba(20,20,20,.10);
+
+  /* Text */
+  --text: #1f2326;
+  --muted: rgba(31,35,38,.70);
+
+  /* Persian accent palette */
+  --persian-green: #00a693;
+  --persian-blue:  #1c39bb;
+  --persian-indigo:#32127a;
+  --persian-pink:  #f77fbe;
+  --persian-red:   #cc124d;
+
+  /* Soft tints */
+  --pg-10: rgba(0,166,147,.10);
+  --pb-10: rgba(28,57,187,.10);
+  --pi-10: rgba(50,18,122,.10);
+  --pp-12: rgba(247,127,190,.12);
+  --pr-10: rgba(204,18,77,.10);
+
+  --shadow: 0 10px 26px rgba(10,10,10,.08);
+  --shadow2: 0 16px 40px rgba(10,10,10,.10);
+
+  --radius: 18px;
+  --radius2: 26px;
+
+  --max: 1180px;
+  --pad: 24px;
+
+  /* Solid “theme” helpers */
+  --accent: var(--persian-red);
+  --accent-soft: var(--pr-10);
+}

@@ -9,7 +9,7 @@ import { clampQty } from "./utils/cart";
 
 import CartDrawer from "./components/CartDrawer";
 
-import "./styles/App.css";
+import "./styles/index.css";
 
 
 export default function App() {

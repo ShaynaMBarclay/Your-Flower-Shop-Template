@@ -21,7 +21,6 @@ export default function Home({
 
   addToCart,
 
-  // shipping panel state
   deliveryMode,
   setDeliveryMode,
   zip,
@@ -55,18 +54,16 @@ export default function Home({
       <main>
         <section className="container hero">
           <div className="heroCard">
-            <div className="heroKicker">Persian-inspired florals • Gift-ready • Hand-crafted</div>
+            <div className="heroKicker">Placeholder florals • Gift-ready • Hand-crafted</div>
             <h1 className="heroTitle">Gul-e-Mariam</h1>
             <p className="heroSub">
-              Elegant arrangements with a soft Persian influence—rich colors, delicate textures, and
-              a touch of poetry in every stem.
+             Your about paragraph/bio will go here
             </p>
 
             <div className="heroActions">
               <a className="btn primary" href="#shop">Shop Florals</a>
               <a className="btn" href="#shipping">Shipping & Delivery</a>
 
-              {/* ✅ Added */}
               <Link className="btn" to="/collection">
                 View our entire collection
               </Link>
@@ -86,19 +83,14 @@ export default function Home({
             </div>
           </div>
         </section>
-
-        {/* Home keeps this section (you can later change to “featured” if you want) */}
         <section id="shop" className="container section">
           <div className="sectionHead">
             <div>
               <h2 className="sectionTitle">Shop Florals</h2>
               <p className="sectionSub">
-                Browse signature bouquets, seasonal stems, and vase arrangements—priced and ready to
-                ship or pick up.
+                Your floral section paragraph will go here, something to catch the eye and describe the collection
               </p>
             </div>
-
-            {/* ✅ Added (nice CTA in header) */}
             <Link className="btn primary" to="/collection">
               View our entire collection
             </Link>
@@ -145,8 +137,7 @@ export default function Home({
             <div className="shippingCard">
               <h2 className="sectionTitle">Shipping & Delivery</h2>
               <p className="sectionSub">
-                Toggle between <b>Shipping</b> and <b>Pickup</b>. This is a mock checkout panel you
-                can show your client.
+                Toggle between <b>Shipping</b> and <b>Pickup</b>. This is a mock checkout panel
               </p>
 
               <div className="toggleRow">
@@ -175,7 +166,7 @@ export default function Home({
                       onChange={(e) => setZip(e.target.value)}
                       placeholder="e.g., 20852"
                     />
-                    <small>Mock: ZIP applies a “local delivery” discount.</small>
+                    <small>Mock: ZIP</small>
                   </label>
                 ) : (
                   <div className="pickupInfo">
@@ -209,17 +200,18 @@ export default function Home({
               </div>
 
               <div className="callout">
-                <div className="calloutTitle">Persian Touch</div>
-                <p className="muted">
-                  Add subtle motifs, refined typography, jewel tones, and elegant spacing—so it feels
-                  inspired without being overly literal.
-                </p>
+                 <div className="calloutTitle">Gifting Made Simple</div>
+  <p className="muted">
+    Choose an arrangement, select your delivery option, add a note, and we’ll take
+    care of the rest. This paragraph can be changed to something else.
+  </p>
+
               </div>
             </div>
 
             <div className="shippingAside">
               <div className="asideCard">
-                <div className="asideTitle">Why Gul-e-Mariam?</div>
+                <div className="asideTitle">Why Gul-e-Mariam? Placeholder text, can be changed</div>
                 <ul className="bullets">
                   <li>Signature bouquets with a luxurious, gift-ready wrap</li>
                   <li>Clear pricing + quick add-to-cart</li>
@@ -231,9 +223,14 @@ export default function Home({
                 </a>
               </div>
 
-              <div className="asideCard subtle">
-                <div className="ornament" aria-hidden="true" />
-                <p className="muted">“Where petals meet poetry.”</p>
+             <div className="asideCard subtle">
+             <div className="asideTitle">Care & Gifting Placeholder text, can be changed</div>
+             <ul className="bullets">
+             <li>Fresh, premium stems sourced for longevity</li>
+             <li>Care instructions included with every order</li>
+             <li>Complimentary gift note available at checkout</li>
+             </ul>
+                
               </div>
             </div>
           </div>
