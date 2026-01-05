@@ -290,7 +290,8 @@ body{
 }
 .heroCard{
   background: rgba(255,255,255,.78);
-  border: 1px solid rgba(20,20,20,.10);
+  border: 3px solid;
+  border-color: rgba(50,18,122,.45) !important;
   border-radius: var(--radius2);
   padding: 26px;
   box-shadow: var(--shadow2);
@@ -535,7 +536,7 @@ body{
   gap: 16px;
 }
 .card{
-  border: 1px solid rgba(20,20,20,.10);
+  border: 2px solid rgba(20,20,20,.10);
   background: rgba(255,255,255,.82);
   border-radius: var(--radius);
   overflow:hidden;
@@ -559,11 +560,21 @@ body{
   background: transparent;
   cursor:pointer;
   position: relative;
+  display: grid;
+  place-items: center;
+  padding: 14px 14px 0;
+  background: transparent;
 }
 .cardImgBtn img{
-  width:100%;
-  height: 210px;
+   width: min(100%, 320px);
+  height: 210px;              
   object-fit: cover;
+  object-position: center;      
+  border-radius: 18px;
+  border: 2px solid rgba(20,20,20,.10);
+  background: rgba(255,255,255,.80);
+  box-shadow: 0 10px 22px rgba(10,10,10,.08);
+   border-bottom: none !important;
 }
 .cardOverlay{
   position:absolute;
@@ -995,6 +1006,52 @@ body{
   overflow:hidden; clip: rect(0,0,0,0);
   border:0;
 }
+
+/* Cycle border colors across cards */
+.grid .card:nth-child(4n+1){
+  border-color: rgba(0,166,147,.55) !important;     /* Persian Green */
+  box-shadow:
+    0 10px 26px rgba(10,10,10,.08),
+    0 0 0 4px rgba(0,166,147,.10) !important;
+}
+
+.grid .card:nth-child(4n+2){
+  border-color: rgba(28,57,187,.45) !important;     /* Persian Blue */
+  box-shadow:
+    0 10px 26px rgba(10,10,10,.08),
+    0 0 0 4px rgba(28,57,187,.09) !important;
+}
+
+.grid .card:nth-child(4n+3){
+  border-color: rgba(50,18,122,.45) !important;     /* Persian Indigo */
+  box-shadow:
+    0 10px 26px rgba(10,10,10,.08),
+    0 0 0 4px rgba(50,18,122,.09) !important;
+}
+
+.grid .card:nth-child(4n){
+  border-color: rgba(247,127,190,.55) !important;   /* Persian Pink */
+  box-shadow:
+    0 10px 26px rgba(10,10,10,.08),
+    0 0 0 4px rgba(247,127,190,.10) !important;
+}
+
+
+.grid .card:hover{
+  transform: translateY(-4px) scale(1.01);
+}
+
+
+.cardImgBtn img{
+  border-bottom: 1px solid rgba(20,20,20,.08);
+}
+
+
+.grid .card:nth-child(4n+1) .pill::before{ opacity: .55 !important; }
+.grid .card:nth-child(4n+2) .pill::before{ opacity: .55 !important; }
+.grid .card:nth-child(4n+3) .pill::before{ opacity: .55 !important; }
+.grid .card:nth-child(4n)   .pill::before{ opacity: .55 !important; }
+
 
 /* Responsive */
 @media (max-width: 980px){

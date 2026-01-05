@@ -1,6 +1,11 @@
 import { useMemo, useState } from "react";
 import "./styles/App.css";
 
+// ✅ Import your local placeholders
+import flowerplaceholder from "./assets/flowerplaceholder.jpg";
+import flowerplaceholder2 from "./assets/flowerplaceholder2.jpg";
+import flowerplaceholder3 from "./assets/flowerplaceholder3.jpg";
+
 const PRODUCTS = [
   {
     id: "rose-sheaf",
@@ -8,7 +13,7 @@ const PRODUCTS = [
     price: 68,
     category: "Bouquets",
     colorTag: "Crimson",
-    img: "https://images.unsplash.com/photo-1542382257-80dedb725088?auto=format&fit=crop&w=1200&q=80",
+    img: flowerplaceholder,
     desc: "Velvety roses with greenery, wrapped in soft linen tones.",
   },
   {
@@ -17,7 +22,7 @@ const PRODUCTS = [
     price: 82,
     category: "Bouquets",
     colorTag: "Saffron",
-    img: "https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1200&q=80",
+    img: flowerplaceholder2,
     desc: "Golden blooms with warm accents inspired by Persian sunrise hues.",
   },
   {
@@ -26,7 +31,7 @@ const PRODUCTS = [
     price: 58,
     category: "Seasonal",
     colorTag: "Blush",
-    img: "https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=1200&q=80",
+    img: flowerplaceholder3,
     desc: "A soft tulip bundle—light, airy, and perfectly giftable.",
   },
   {
@@ -35,7 +40,7 @@ const PRODUCTS = [
     price: 95,
     category: "Arrangements",
     colorTag: "Emerald",
-    img: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80",
+    img: flowerplaceholder,
     desc: "Lush garden-style arrangement in a keepsake vase.",
   },
   {
@@ -44,7 +49,7 @@ const PRODUCTS = [
     price: 74,
     category: "Seasonal",
     colorTag: "Citrus",
-    img: "https://images.unsplash.com/photo-1487073240288-854ac3a398c0?auto=format&fit=crop&w=1200&q=80",
+    img: flowerplaceholder2,
     desc: "Bright citrus tones for celebrations and new beginnings.",
   },
   {
@@ -53,7 +58,7 @@ const PRODUCTS = [
     price: 88,
     category: "Arrangements",
     colorTag: "Indigo",
-    img: "https://images.unsplash.com/photo-1545231097-cbd796f1d95a?auto=format&fit=crop&w=1200&q=80",
+    img: flowerplaceholder3,
     desc: "Moody, elegant florals with a night-garden feel.",
   },
 ];
@@ -115,16 +120,12 @@ export default function App() {
   const shipping = useMemo(() => {
     if (deliveryMode !== "ship") return 0;
     if (!cartItems.length) return 0;
-    // simple mock logic:
-    // - base 12
-    // - zip present => pretend "local delivery" discount
     const base = 12;
     const localDiscount = zip.trim().length >= 5 ? 4 : 0;
     return Math.max(0, base - localDiscount);
   }, [deliveryMode, zip, cartItems.length]);
 
   const tax = useMemo(() => {
-    // simple mock tax: 6%
     return Math.round(subtotal * 0.06 * 100) / 100;
   }, [subtotal]);
 
@@ -157,7 +158,6 @@ export default function App() {
   }
 
   function mockCheckout() {
-    // This is a mock: you’d hook this to Stripe/Shopify/etc later.
     const summary = {
       deliveryMode,
       zip: deliveryMode === "ship" ? zip : null,
@@ -213,10 +213,8 @@ export default function App() {
           <div className="heroImage" aria-hidden="true">
             <div className="heroPattern" />
             <div className="heroImageInner">
-              <img
-                src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1400&q=80"
-                alt="Florals hero placeholder"
-              />
+              {/* ✅ Use one of your placeholders for the hero image too */}
+              <img src={flowerplaceholder2} alt="Florals hero placeholder" />
             </div>
           </div>
         </section>
@@ -361,9 +359,7 @@ export default function App() {
 
               <div className="asideCard subtle">
                 <div className="ornament" aria-hidden="true" />
-                <p className="muted">
-                  “Where petals meet poetry.”
-                </p>
+                <p className="muted">“Where petals meet poetry.”</p>
               </div>
             </div>
           </div>
@@ -485,7 +481,12 @@ function Badge({ title, desc }) {
 function ProductCard({ product, onQuickView, onAdd }) {
   return (
     <article className="card">
-      <button className="cardImgBtn" onClick={onQuickView} type="button" aria-label={`Quick view ${product.name}`}>
+      <button
+        className="cardImgBtn"
+        onClick={onQuickView}
+        type="button"
+        aria-label={`Quick view ${product.name}`}
+      >
         <img src={product.img} alt={product.name} loading="lazy" />
         <div className="cardOverlay">
           <div className="pill">{product.colorTag}</div>
@@ -583,7 +584,9 @@ function CartDrawer({
                   <img className="cartThumb" src={product.img} alt={product.name} />
                   <div className="cartInfo">
                     <div className="cartName">{product.name}</div>
-                    <div className="muted">{formatMoney(product.price)} • {product.category}</div>
+                    <div className="muted">
+                      {formatMoney(product.price)} • {product.category}
+                    </div>
 
                     <div className="qtyRow">
                       <label className="qty">
@@ -600,9 +603,7 @@ function CartDrawer({
                     </div>
                   </div>
 
-                  <div className="cartLineTotal">
-                    {formatMoney(product.price * qty)}
-                  </div>
+                  <div className="cartLineTotal">{formatMoney(product.price * qty)}</div>
                 </div>
               ))}
             </div>
@@ -612,7 +613,7 @@ function CartDrawer({
         <div className="drawerFoot">
           <div className="totals">
             <Row label="Subtotal" value={formatMoney(subtotal)} />
-            <Row label="Shipping" value={shipping ? formatMoney(shipping) : formatMoney(0)} />
+            <Row label="Shipping" value={formatMoney(shipping)} />
             <Row label="Tax (mock)" value={formatMoney(tax)} />
             <div className="totalsDivider" />
             <Row label={<b>Total</b>} value={<b>{formatMoney(total)}</b>} />
@@ -632,9 +633,7 @@ function CartDrawer({
             </button>
           </div>
 
-          <div className="drawerNote muted">
-            Demo only — add Stripe/Shopify later.
-          </div>
+          <div className="drawerNote muted">Demo only — add Stripe/Shopify later.</div>
         </div>
       </aside>
     </div>
@@ -656,9 +655,7 @@ function Footer() {
       <div className="container footerInner">
         <div>
           <div className="footerTitle">Gul-e-Mariam</div>
-          <p className="muted">
-            Persian-inspired floral arrangements, crafted with care.
-          </p>
+          <p className="muted">Persian-inspired floral arrangements, crafted with care.</p>
           <div className="footerSmall muted">© {new Date().getFullYear()} Gul-e-Mariam</div>
         </div>
 
