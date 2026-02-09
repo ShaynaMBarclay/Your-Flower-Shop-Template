@@ -11,16 +11,16 @@ import CartDrawer from "./components/CartDrawer";
 
 import "./styles/index.css";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 
 export default function App() {
   const [activeProduct, setActiveProduct] = useState(null);
 
-  // cart: { [id]: qty }
   const [cart, setCart] = useState({});
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  // checkout options
-  const [deliveryMode, setDeliveryMode] = useState("ship"); // ship | pickup
+  const [deliveryMode, setDeliveryMode] = useState("ship"); 
   const [zip, setZip] = useState("");
   const [deliveryDate, setDeliveryDate] = useState("");
   const [giftNote, setGiftNote] = useState("");
@@ -137,6 +137,8 @@ export default function App() {
  
 return (
   <>
+     <ScrollToTop />
+
     <Routes>
       <Route path="/" element={<Home {...shared} />} />
       <Route path="/collection" element={<Collection {...shared} />} />

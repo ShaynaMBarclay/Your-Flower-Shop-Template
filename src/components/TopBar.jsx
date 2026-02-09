@@ -6,7 +6,7 @@ export default function TopBar({ cartCount, onCart }) {
       <div className="container topbarInner">
         <div className="topbarLeft">
           <span className="topbarMark" aria-hidden="true">✦</span>
-          <span>Gul-e-Mariam — Floral Studio</span>
+          <span>Your Flower Shop — Floral Studio</span>
         </div>
         <div className="topbarRight">
           <a className="topLink" href="#shop">Shop</a>

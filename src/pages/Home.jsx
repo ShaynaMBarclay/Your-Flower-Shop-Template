@@ -55,13 +55,13 @@ export default function Home({
         <section className="container hero">
           <div className="heroCard">
             <div className="heroKicker">Placeholder florals • Gift-ready • Hand-crafted</div>
-            <h1 className="heroTitle">Gul-e-Mariam</h1>
+            <h1 className="heroTitle">Your Flower Shop</h1>
             <p className="heroSub">
              Your about paragraph/bio will go here
             </p>
 
             <div className="heroActions">
-              <a className="btn primary" href="#shop">Shop Florals</a>
+              <a className="btn-mosaic" href="#shop">Shop Florals</a>
               <a className="btn" href="#shipping">Shipping & Delivery</a>
 
               <Link className="btn" to="/collection">
@@ -91,7 +91,7 @@ export default function Home({
                 Your floral section paragraph will go here, something to catch the eye and describe the collection
               </p>
             </div>
-            <Link className="btn primary" to="/collection">
+            <Link className="btn-mosaic" to="/collection">
               View our entire collection
             </Link>
           </div>
@@ -172,7 +172,7 @@ export default function Home({
                   <div className="pickupInfo">
                     <div className="pill">Pickup Location</div>
                     <p className="muted">
-                      Gul-e-Mariam Floral Studio<br />
+                      Your Name Floral Studio<br />
                       123 Placeholder St, Your City
                     </p>
                   </div>
@@ -211,14 +211,14 @@ export default function Home({
 
             <div className="shippingAside">
               <div className="asideCard">
-                <div className="asideTitle">Why Gul-e-Mariam? Placeholder text, can be changed</div>
+                <div className="asideTitle">Why Your Flower Shop? Placeholder text, can be changed</div>
                 <ul className="bullets">
                   <li>Signature bouquets with a luxurious, gift-ready wrap</li>
                   <li>Clear pricing + quick add-to-cart</li>
-                  <li>Shipping/pickup toggle for modern ordering</li>
-                  <li>Room for “Wedding & Events” and “Custom Orders” later</li>
+                  <li>Placeholder text</li>
+                  <li>More placeholder text</li>
                 </ul>
-                <a className="btn primary wide" href="#shop">
+                <a className="btn-mosaic" href="#shop">
                   Explore Arrangements
                 </a>
               </div>

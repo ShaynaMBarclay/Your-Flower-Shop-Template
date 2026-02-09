@@ -98,7 +98,7 @@ export default function CartDrawer({
               Clear
             </button>
             <button
-              className="btn primary"
+              className=""
               onClick={onCheckout}
               type="button"
               disabled={!cartItems.length}

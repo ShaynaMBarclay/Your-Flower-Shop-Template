@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import icon from "../assets/icon.png";
+
 
 export default function Header() {
   return (
@@ -6,12 +8,12 @@ export default function Header() {
       <div className="headerPattern" aria-hidden="true" />
       <div className="container headerInner">
         <div className="brand">
-          <div className="brandSeal" aria-hidden="true">
-            <div className="sealInner">GM</div>
+          <div className="brandSeal">
+          <img src={icon} alt="Brand icon" className="brandIcon" />
           </div>
           <div>
-            <div className="brandName">Gul-e-Mariam</div>
-            <div className="brandTag">Persian-inspired florals • Shipping available</div>
+            <div className="brandName">Your Flower Shop</div>
+            <div className="brandTag">Placeholder Text • Shipping available</div>
           </div>
         </div>
 

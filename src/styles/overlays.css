@@ -200,3 +200,108 @@
   margin-top: 12px;
 }
 .drawerNote{ margin-top: 10px; font-size: .9rem; }
+
+
+@media (max-width: 1024px) {
+  .modal {
+    width: min(700px, 95%);
+  }
+
+  .modalGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .modalImg img {
+    min-height: 280px;
+  }
+
+  .drawer {
+    width: min(360px, 85vw);
+  }
+}
+
+@media (max-width: 767px) {
+   .modal {
+    width: 100%;
+    max-width: 92%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 18px;
+  }
+
+ .modalGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+   .modalImg img {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+  }
+
+  .modalInfo {
+    padding: 14px;
+  }
+  
+  .drawer {
+    width: 100%;
+    max-width: 100%;
+    transform: translateX(105%);
+  }
+
+  .drawer.open {
+    transform: translateX(0);
+  }
+
+   .drawerHead {
+    padding: 10px 12px;  
+    flex-direction: column; 
+    align-items: center;  
+    justify-content: center; 
+    gap: 6px;                
+    text-align: center;     
+  }
+
+    .drawerTitle {
+    font-size: 1rem;       
+    line-height: 1.2;
+  }
+
+  .drawerSub {
+    margin-top: 2px;        
+    font-size: 0.88rem;     
+  }
+
+  .iconBtn {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+
+  .drawerBody {
+    padding: 12px;
+  }
+
+  .cartRow {
+    grid-template-columns: 60px 1fr auto;
+    gap: 8px;
+  }
+
+  .cartThumb {
+    width: 60px;
+    height: 50px;
+  }
+
+  .drawerActions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .totals {
+    gap: 6px;
+  }
+}

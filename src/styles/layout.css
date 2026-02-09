@@ -62,3 +62,59 @@
   flex-direction:column;
   gap: 12px;
 }
+
+@media (max-width: 767px) {
+
+  /* Header */
+  .headerInner {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  /* Hero */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 0 8px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 20px 0;
+  }
+
+  .sectionHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionSub {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  /* Product grid */
+  .grid {
+    grid-template-columns: 1fr; 
+    gap: 10px;
+  }
+
+  /* Shipping layout */
+  .shippingWrap {
+    grid-template-columns: 1fr; 
+    gap: 12px;
+  }
+
+  .shippingAside {
+    gap: 8px;
+  }
+}

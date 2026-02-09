@@ -3,9 +3,9 @@ export default function Footer() {
     <footer id="contact" className="footer">
       <div className="container footerInner">
         <div>
-          <div className="footerTitle">Gul-e-Mariam</div>
-          <p className="muted">Persian-inspired floral arrangements, crafted with care.</p>
-          <div className="footerSmall muted">© {new Date().getFullYear()} Gul-e-Mariam</div>
+          <div className="footerTitle">Your Flower Shop</div>
+          <p className="muted">floral arrangements, crafted with care.</p>
+          <div className="footerSmall muted">© {new Date().getFullYear()} Your Flower Shop </div>
         </div>
 
         <div className="footerCols">
@@ -18,7 +18,7 @@ export default function Footer() {
 
           <div className="footerCol">
             <div className="footerHead">Contact</div>
-            <span className="muted">hello@gul-e-mariam.com</span>
+            <span className="muted">hello@you-email-here.com</span>
             <span className="muted">(555) 123-4567</span>
           </div>
         </div>

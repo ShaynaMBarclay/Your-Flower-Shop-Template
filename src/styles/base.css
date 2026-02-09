@@ -18,6 +18,7 @@ img{ display:block; max-width:100%; }
   width: min(var(--max), calc(100% - var(--pad) * 2));
   margin: 0 auto;
   font-family: "Faustina", serif;
+  
 }
 
 .page{
@@ -28,7 +29,7 @@ img{ display:block; max-width:100%; }
 
 .page::before{
   content:"";
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: -1;
   pointer-events:none;
@@ -76,6 +77,232 @@ img{ display:block; max-width:100%; }
   padding:0; margin:-1px;
   overflow:hidden; clip: rect(0,0,0,0);
   border:0;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,.6);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--persian-pink),
+    var(--persian-red)
+  );
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--persian-red),
+    var(--persian-indigo)
+  );
+}
+
+/* ===== Tablets (up to 1024px) ===== */
+@media (max-width: 1024px) {
+  body {
+    font-size: 0.96rem;
+    line-height: 1.45;
+  }
+
+  .container {
+    width: 94%;
+    padding: 0 12px;
+  }
+
+  .heroTitle,
+  .sectionTitle,
+  .brandName,
+  .drawerTitle,
+  .modalTitle,
+  .footerTitle,
+  .cardTitle {
+    font-size: 1.7rem;
+  }
+
+  .heroKicker,
+  .brandTag,
+  .sectionSub,
+  .cardMeta,
+  .muted,
+  .topLink,
+  .segBtn,
+  .btn,
+  .toggleBtn {
+    font-size: 0.9rem;
+  }
+
+  .btn,
+  .toggleBtn,
+  .cartBtn {
+    padding: 9px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== Mobile (up to 767px) ===== */
+@media (max-width: 767px) {
+  body {
+    font-size: 0.92rem;
+    line-height: 1.42;
+  }
+
+  .container {
+    width: 96%;
+    padding: 0 10px;
+  }
+
+  .heroTitle,
+  .sectionTitle,
+  .brandName,
+  .drawerTitle,
+  .modalTitle,
+  .footerTitle,
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+
+  .heroKicker,
+  .brandTag,
+  .sectionSub,
+  .cardMeta,
+  .muted,
+  .topLink,
+  .segBtn,
+  .btn,
+  .toggleBtn {
+    font-size: 0.88rem;
+  }
+
+  .btn,
+  .toggleBtn,
+  .cartBtn {
+    padding: 8px 2px;
+    font-size: 0.88rem;
+  }
+}
+
+/* ===== Small screens / budget Androids (up to 480px) ===== */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 0.88rem; 
+    line-height: 1.4;
+  }
+
+  .container {
+    width: 95%;
+    padding: 0 8px;
+  }
+
+  .heroTitle,
+  .sectionTitle,
+  .brandName,
+  .drawerTitle,
+  .modalTitle,
+  .footerTitle,
+  .cardTitle {
+    font-size: 1.3rem; 
+  }
+
+  .heroKicker,
+  .brandTag,
+  .sectionSub,
+  .cardMeta,
+  .muted,
+  .topLink,
+  .segBtn,
+  .btn,
+  .toggleBtn {
+    font-size: 0.85rem; 
+  }
+
+  .btn,
+  .toggleBtn,
+  .cartBtn {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .page::before {
+    background-size: 200% 200%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .page {
+    min-height: auto;
+  }
+}
+
+
+/* ===== Small screens / budget Androids (up to 480px) ===== */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 0.88rem; 
+    line-height: 1.4;
+  }
+
+  .container {
+    width: 95%;
+    padding: 0 8px;
+  }
+
+  .heroTitle,
+  .sectionTitle,
+  .brandName,
+  .drawerTitle,
+  .modalTitle,
+  .footerTitle,
+  .cardTitle {
+    font-size: 1.3rem; 
+  }
+
+  .heroKicker,
+  .brandTag,
+  .sectionSub,
+  .cardMeta,
+  .muted,
+  .topLink,
+  .segBtn,
+  .btn,
+  .toggleBtn {
+    font-size: 0.85rem; 
+  }
+
+  .btn,
+  .toggleBtn,
+  .cartBtn {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .page::before {
+    background-size: 200% 200%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .page {
+    min-height: auto;
+  }
 }
 
 
